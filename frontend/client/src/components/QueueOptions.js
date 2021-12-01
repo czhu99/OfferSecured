@@ -19,17 +19,22 @@ function QueueOptions() {
     <div class="flex-grid-thirds">
         <div class="col">
             <Link to="/behavioral">
-                <Button style={{ height: 300, fontSize: 40 }} type="primary">Behavioral</Button> 
+                <Button style={{ height: 300, fontSize: 40 }} type="primary">Behavioral (0 in Queue)</Button> 
             </Link>
         </div>
         
         <div class="col"> 
-            <Button style={{ height: 300, fontSize: 40 }} type="primary">Resume Review</Button>
+        <Link to="/resume-rev">
+                <Button style={{ height: 300, fontSize: 40 }} type="primary">Resume Review (0 in Queue)</Button> 
+            </Link>
         </div>
 
         <div class="col"> 
-            <Button style={{ height: 300, fontSize: 40 }} type="primary">Coding</Button> </div>
+            <Link to="/coding">
+                <Button style={{ height: 300, fontSize: 40 }} type="primary">Coding (0 in Queue)</Button> 
+            </Link>
         </div>
+    </div>
     )
 }
 

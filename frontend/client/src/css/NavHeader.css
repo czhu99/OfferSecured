@@ -4,23 +4,36 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background: #fff;
+  background: #c4c4c4;
   position: sticky;
   top: 0;
   padding-top: 0.5em;
   padding-right: 0px;
   padding-left: 12px;
   z-index: 2;
+  height: 150px;
 }
 
 .nav-desktop .nav-desktop-logo {
-  background-color: #fff;
-  background-image: url('../assets/briefcase.jpg'); 
+  background-color: #c4c4c4;
+  background-image: url('../assets/briefcase.png'); 
   background-position: center;
   background-size: cover;
-  height: 32px;
-  width: 32px;
+  height: 54px;
+  width: 54px;
 }
+
+/* .ant-menu {
+    background: #c4c4c4;
+    display: table;
+} */
+
+/* .ant-menu-item {
+  /* vertical-align: middle;
+  display: table-cell; 
+  position: absolute;
+  top: 50%;
+} */
 
 .flex-row {
   display: flex;
@@ -31,14 +44,16 @@
 .nav-title {
   padding-left: 10px;
   width: 200px;
-  font-size: 20px;
+  font-size: 32px;
   font-weight: bold;
+  color: white;
 }
 
 .nav-desktop .ant-menu {
-  font-size: 16px;
-  color: rgba(0, 0, 0, 0.65);
+  font-size: 24px;
+  color: white;
   line-height: 48px;
+  background: #c4c4c4;
 }
 
 .nav-desktop .ant-menu-horizontal {
@@ -46,4 +61,13 @@
   float: right;
   margin-top: 6px;
   width: 500px;
+}
+
+.ant-menu-horizontal > .ant-menu-item {
+    align-self: center;
+    color: white;
+}
+
+.ant-menu-horizontal > .ant-menu-item a {
+    color: white;
 }
