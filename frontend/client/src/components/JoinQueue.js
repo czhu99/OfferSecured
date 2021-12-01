@@ -4,7 +4,7 @@ import 'antd/dist/antd.css';
 import '../css/JoinQueue.css'
 
 function JoinQueue(props) {
-    const {q, onQChange} = props;
+    const {q, onQChange, setCurCount} = props;
     const [queue, setQ] = useState(q);
     const [curName, setName] = useState('');
     const [curTopic, setTopic] = useState('');
@@ -19,6 +19,7 @@ function JoinQueue(props) {
                 queue.push({name: curName, topic: curTopic, zoomLink: curZoom});
                 setQ([...queue]);
                 onQChange([...queue]);
+                setCurCount(queue.length);
                 //console.log(queue);
             })}>Join Queue</Button> 
         </div>

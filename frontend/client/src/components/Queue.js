@@ -13,8 +13,8 @@ function Queue(props) {
         <div className='queue-wrapper'>
             <p className="queue-name">{desc}</p>
             
-            {q.map(({name, topic, zoomLink}) =>
-                <Card title={name} extra={<a href="#">More</a>}>
+            {q.map(({name, topic, zoomLink}, index) =>
+                <Card title={name} extra={<a href="#">{index}</a>}>
                     <p>{topic}</p>
                     <p>{zoomLink}</p>
                 </Card>

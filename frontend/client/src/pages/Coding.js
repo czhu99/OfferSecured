@@ -14,12 +14,13 @@ function Coding() {
     q.push(p3);
 
     const[queue, setQ] = useState(q);
+    const[curCount, setCurCount] = useState(queue.length);
 
     return (
         <div className="queue-page-items"> 
-            <JoinQueue q={queue} onQChange={setQ}/>
+            <JoinQueue q={queue} onQChange={setQ} setCurCount={setCurCount}/>
             <div className="separator"></div>
-            <Queue q={queue} desc={'Coding Interview Queue'} onQChange={setQ}/>
+            <Queue q={queue} desc={'Coding Interview Queue (' + curCount + ' currently in queue)' } onQChange={setQ} setCurCount={setCurCount}/>
         </div>
     )
 }
