@@ -1,0 +1,16 @@
+.queue-page-items .queue-input {
+    width: 20%;
+    align-items: center;
+}
+
+.queue-input .ant-input {
+    margin: 10px;
+    width: 90%;
+    display: table;
+}
+
+.queue-input .ant-btn {
+    display: table;
+    margin: 0 auto;
+    width: 50%;
+}

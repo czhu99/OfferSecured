@@ -1,0 +1,12 @@
+.queue-page-items {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 3%;
+    width: 100%;
+
+}
+
+.separator{
+    width: 5%;
+}

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, Input} from 'antd';
 import 'antd/dist/antd.css';
-import '../css/Queue.css'
+import '../css/JoinQueue.css'
 
 function JoinQueue() {
     return (
@@ -9,7 +9,7 @@ function JoinQueue() {
             <Input size="default" placeholder="Name" />
             <Input size="default" placeholder="Topic" />
             <Input size="default" placeholder="Zoom Link" />
-            <Button style={{ height: 30, fontSize: 15 }} type="primary">Join Queue</Button> 
+            <Button style={{ height: 30, fontSize: 15}} type="primary">Join Queue</Button> 
         </div>
     )
 }

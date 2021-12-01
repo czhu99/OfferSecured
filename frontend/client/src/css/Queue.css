@@ -1,5 +1,18 @@
-.queue-input {
-    margin-top: 5%;
-    justify-content: center;
-    width: 25%;
+.queue-page-items .queue-wrapper {
+    width: 70%;
+    border: 3px;
+    border-color: #f0f0f0;
+    border-style: solid;
+}    
+
+.ant-card {
+    width: 90%;
+    display: table;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+.queue-name {
+    text-align: center;
+    font-size: 30px;
 }
