@@ -19,7 +19,7 @@ function Behavioral() {
         <div className="queue-page-items"> 
             <JoinQueue q={queue} onQChange={setQ}/>
             <div className="separator"></div>
-            <Queue q={queue} onQChange={setQ}/>
+            <Queue q={queue} desc={'Behavioral Interview Queue'} onQChange={setQ}/>
         </div>
     )
 }
