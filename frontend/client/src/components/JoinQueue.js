@@ -16,11 +16,10 @@ function JoinQueue(props) {
             <Input onChange={(e) => {setTopic(e.target.value)}} size="default" placeholder="Topic" />
             <Input onChange={(e) => {setZoom(e.target.value)}} size="default" placeholder="Zoom Link" />
             <Button style={{ height: 30, fontSize: 15}} type="primary" onClick={(e=> {
-                queue.push({name: curName, topic: curTopic, zoomLink: curZoom});
-                setQ([...queue]);
-                onQChange([...queue]);
-                setCurCount(queue.length);
-                //console.log(queue);
+                q.push({name: curName, topic: curTopic, zoomLink: curZoom});
+                setQ([...q]);
+                onQChange([...q]);
+                setCurCount(q.length);
             })}>Join Queue</Button> 
         </div>
     )
