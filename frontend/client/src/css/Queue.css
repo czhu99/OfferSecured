@@ -21,5 +21,9 @@
     display: table;
     margin: 0 auto;
     color: white;
-    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
+
+

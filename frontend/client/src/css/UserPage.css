@@ -1,0 +1,30 @@
+.profile-wrapper {
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    height:max-content;
+    padding: 3em;
+}
+
+.profile-header {
+    justify-content: center;
+    text-align: center;
+    
+    justify-content: center;
+    align-self: center;
+    background-color: #ffbb12;
+    
+    width: 350px;
+    height: 350px;
+
+    color: white;
+    font-size: 22px;
+    border: 5px;
+    border-style: solid;
+    border-color: #f0f0f0;
+}
+.profile-photo {
+    border-radius: 50%;
+    padding: .25em;
+  
+}
