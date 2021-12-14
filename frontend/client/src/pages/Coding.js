@@ -1,20 +1,22 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import JoinQueue from "../components/JoinQueue";
 import Queue from "../components/Queue";
 import '../css/QueuePage.css'
+import axios from "axios";
 
 function Coding() {
-    var q = [];
-    var p1 = {name: 'Chris Zhu', topic: 'TwoSum', zoomLink: 'zoom.com'};
-    var p2 = {name: 'Abhi C', topic: 'Reverse Linked List', zoomLink: 'zoom.com'};
-    var p3 = {name: 'Lam Tran', topic: 'Invert BST', zoomLink: 'zoom.com'};
-
-    q.push(p1);
-    q.push(p2);
-    q.push(p3);
-
-    const[queue, setQ] = useState(q);
+    const[queue, setQ] = useState([]);
     const[curCount, setCurCount] = useState(queue.length);
+
+    useEffect(() => {
+        axios.get('http://localhost:4000/queues/coding')
+        .then(response => {
+            if (response.data) {
+                setQ(response.data.queue);
+                setCurCount(response.data.queue.length);
+            }
+        });
+    }, []);
 
     return (
         <div className="queue-page-items"> 

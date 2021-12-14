@@ -1,20 +1,23 @@
-import React, { useState } from "react";
+import axios from "axios";
+import React, { useState, useEffect } from "react";
 import JoinQueue from "../components/JoinQueue";
 import Queue from "../components/Queue";
 import '../css/QueuePage.css'
 
 function Behavioral(props) {
-    var q = [];
-    var p1 = {name: 'Chris Zhu', topic: 'MS Interview', zoomLink: 'zoom.com'};
-    var p2 = {name: 'Abhi C', topic: 'Google Interview', zoomLink: 'zoom.com'};
-    var p3 = {name: 'Lam Tran', topic: 'FB Interview', zoomLink: 'zoom.com'};
 
-    q.push(p1);
-    q.push(p2);
-    q.push(p3);
-
-    const[queue, setQ] = useState(q);
+    const[queue, setQ] = useState([]);
     const[curCount, setCurCount] = useState(queue.length);
+
+    useEffect(() => {
+        axios.get('http://localhost:4000/queues/behavioral')
+        .then(response => {
+            if (response.data) {
+                setQ(response.data.queue);
+                setCurCount(response.data.queue.length);
+            }
+        });
+    }, []);
 
     return (
         <div className="queue-page-items"> 

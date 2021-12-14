@@ -1,20 +1,22 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import JoinQueue from "../components/JoinQueue";
 import Queue from "../components/Queue";
 import '../css/QueuePage.css'
+import axios from "axios";
 
 function Resume() {
-    var q = [];
-    var p1 = {name: 'Chris Zhu', topic: 'Experience', zoomLink: 'zoom.com'};
-    var p2 = {name: 'Abhi C', topic: 'Format', zoomLink: 'zoom.com'};
-    var p3 = {name: 'Lam Tran', topic: 'Cover Letter', zoomLink: 'zoom.com'};
-
-    q.push(p1);
-    q.push(p2);
-    q.push(p3);
-
-    const[queue, setQ] = useState(q);
+    const[queue, setQ] = useState([]);
     const[curCount, setCurCount] = useState(queue.length);
+
+    useEffect(() => {
+        axios.get('http://localhost:4000/queues/resume')
+        .then(response => {
+            if (response.data) {
+                setQ(response.data.queue);
+                setCurCount(response.data.queue.length);
+            }
+        });
+    }, []);
 
     return (
         <div className="queue-page-items"> 

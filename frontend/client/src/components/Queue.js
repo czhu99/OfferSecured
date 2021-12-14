@@ -1,4 +1,4 @@
-import React, {State, useState} from 'react';
+import React, {State, useState, useEffect} from 'react';
 import { Card, Button} from 'antd';
 import 'antd/dist/antd.css';
 import '../css/Queue.css'
@@ -16,16 +16,14 @@ function Queue(props) {
         setCurCount([...updatedQueue].length)
     }
 
-    console.log("Queue:" + q.length);
-
     return (
         <div className='queue-wrapper'>
             <p className="queue-name">{desc}</p>
             
-            {q.map(({name, topic, zoomLink}, index) =>
+            {q.map(({name, topic, link}, index) =>
                 <Card title={name} extra={<Button onClick={(e)=>removeFromQueue(index)}>Remove</Button>}>
                     <p>{topic}</p>
-                    <p>{zoomLink}</p>
+                    <p>{link}</p>
                 </Card>
             )}
             
