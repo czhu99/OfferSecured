@@ -35,6 +35,12 @@ app.use(bodyParser.json());
 // Use routes as a module (see index.js)
 // require('./routes')(app, router);
 
+const queuesRouter = require('./routes/queues');
+const usersRouter = require('./routes/users');
+
+app.use('/queues', queuesRouter);
+app.use('/users', usersRouter);
+
 // Start the server
 app.listen(port);
 console.log('Server running on port ' + port);
